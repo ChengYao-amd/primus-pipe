@@ -1,0 +1,20 @@
+fwd_time: 1000
+bwd_time: 1000
+wgrad_time: 1000
+
+output_dir: ./pp_simulation_result_zbv
+
+schedulers:
+  - name: zbv-greedy-v-half
+    class: primuspipe.scheduler.algorithms.zbv_greedy.ScheduleZBVGreedy
+    pp_size: 4
+    vpp_size: 2
+    micro_batches: 16
+    memory_config: half
+
+  - name: zbv-greedy-v-min
+    class: primuspipe.scheduler.algorithms.zbv_greedy.ScheduleZBVGreedy
+    pp_size: 4
+    vpp_size: 2
+    micro_batches: 16
+    memory_config: min
